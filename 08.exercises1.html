@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08.exercises1</title>
+    <script>
+        // 1번
+        var week = prompt('요일을 입력하세요.(월-금)');
+
+        if (week == '월' || week == '수' || week == '금')
+            console.log('정상 수업');
+        else if(week == '화' || week == '목')
+            console.log('수업 없음');
+        else
+            console.log('잘못 입력');
+
+        // 2번
+        var ID = 'Car';
+        for(var i = 0; i < 3; i++){
+            var idInput = prompt('아이디를 입력하세요.');
+            if(ID == idInput){
+                console.log(idInput+'님 반갑습니다!');
+                break;
+            } else {
+                console.log('ID가 잘못 입력되었습니다.')
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

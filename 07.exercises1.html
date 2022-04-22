@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07.exercises1</title>
+</head>
+<body>
+    <script>
+        var height = 170;
+        var weight = 50;
+        var normal = 23;
+
+        var BMI = (weight / (height * height)) * 10000;
+        BMI = BMI.toFixed(0);
+
+        console.log('신장: ', + height);
+        console.log('몸무게: ', + weight);
+        console.log('BMI: ', + BMI);
+        var result = (BMI > normal) ? '비만입니다.' : '비만이 아닙니다.';
+        console.log('판정 결과: ' + result);
+    </script>
+</body>
+</html>

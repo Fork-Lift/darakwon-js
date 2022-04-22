@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13.event-mouse1</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            cursor: pointer;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            cursor: pointer;
+        }
+
+        input[name="search"]{
+            padding: 5px;
+            border: 2px solid #aaa;
+        }
+    </style>
+    <script>
+        function overBox(obj){
+            obj.style.backgroundColor = 'lightgreen';
+        }
+
+        function downBox(obj){
+            obj.style.backgroundColor = 'lightblue';
+        }
+
+        function upBox(obj){
+            obj.style.backgroundColor = 'lightgray';
+        }
+
+        function outBox(obj){
+            obj.style.backgroundColor = 'lightcoral';
+        }
+
+        function clickBox(obj){
+            obj.style.backgroundColor = 'lightgreen';
+        }
+
+        function dblclickBox(obj){
+            obj.style.backgroundColor = 'lightblue';
+        }
+
+        function downInput(){
+            console.log('keydown');
+        }
+
+        function upInput(){
+            console.log('keyup');
+        }
+
+        function pressInput(){
+            console.log('keypress');
+        }
+    </script>
+</head>
+<body>
+    <div id="box" onmouseover="overBox(this)" onmousedown="downBox(this)" onmouseup="upBox(this)" onmouseout="outBox(this)"></div>
+    <div id="box1" onclick="clickBox(this)" ondblclick="dblclickBox(this)"></div>
+    <input type="text" name="search" onkeydown="downInput()" onkeyup="upInput()" onkeypress="pressInput()" placeholder="검색어를 입력하세요.">
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08.conditional4</title>
+    <script>
+        var price = 0;
+        var fruit = 'apple';
+        switch(fruit){
+            case 'apple':
+                price = 5000;
+                break;
+            case 'banana':
+                price = 3000;
+                break;
+            case 'pear':
+                price = 6000;
+                break;
+            default:
+                console.log('입력된 과일은 팔지 않습니다.');
+                break;
+        }
+
+        var x;
+        for(x=1; x<=5; x += 2){
+            console.log(x);
+        }
+
+        if(price != 0)
+            console.log('The price of '+fruit+' is '+price+' won.');
+
+        var x = 1;
+        var result = 0;
+        while(x <= 5){
+            result = x * x;
+            console.log(x+'*'+x+'='+result);
+            x++;
+        }
+
+        var x = 8;
+        var step = 1;
+        var result = 0;
+        while(step <= 9){
+            result = x * step;
+            console.log(x+'*'+step+'='+result);
+            step++;
+        }
+
+        for(i=1; i<=10; i++){
+            console.log(i);
+            if(i==5){
+                console.log('break;에 의해서 종료');
+                break;
+            }
+        }
+
+        for(i=1; i<=10; i++){
+            if(i==5 || i==7){
+                console.log('continue 문에 의해서 실행 제외');
+                continue;
+            }
+            console.log(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

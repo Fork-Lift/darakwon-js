@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.object1</title>
+    <script>
+        var car = {
+            company: 'A회사',
+            model: '중형차',
+            myCarInfo: function(){
+                console.log('내 차는 '+
+                    this.company+'의 '+this.model+'입니다.');
+            }
+        }
+        console.log('회사 이름: '+car.company);
+        console.log('차의 모델명: '+car.model);
+        car.myCarInfo();
+
+        var book = {
+            publisher: '다락원',
+            name: '오늘부터 자바스크립트',
+            price: 23000,
+            showPrice: function(num){
+                var totalPrice = this.price * num;
+                return totalPrice;
+            }
+        }
+        console.log('도서명:', book.name);
+        console.log('출판사:', book.publisher);
+        console.log('3권의 가격:', book.showPrice(3)+'원');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

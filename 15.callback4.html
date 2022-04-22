@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.callback4</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        #red,
+        #blue {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: lightcoral;
+            cursor: pointer;
+        }
+
+        #blue {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="red"></div>
+        <div id="blue"></div>
+    </div>
+    <script>
+        var redBox = document.getElementById('red');
+
+        redBox.addEventListener('click', clickRed);
+
+        function clickRed(){
+            this.style.boxShadow = '2px 2px 2px #888';
+        }
+
+        var blueBox = document.querySelector('#blue');
+
+        blueBox.addEventListener('mouseover', function(){
+            this.style.boxShadow = '2px 2px 2px #888';
+        });
+
+        blueBox.addEventListener('mouseout', function(){
+            this.style.boxShadow = 'none';
+        });
+    </script>
+</body>
+</html>

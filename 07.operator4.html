@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07.operator4</title>
+</head>
+<body>
+    <script>
+        var x = true, y = false;
+        console.log('x || y -> ' + (x || y));
+        console.log('x && y -> ' + (x && y));
+        console.log('!x -> ' + (!x));
+
+        var x = 10, y = 0;
+        x ++;
+        console.log('x = ' + x);
+        x --;
+        console.log('x = ' + x);
+        y = x ++;
+        console.log('x = ' + x + ',y = ' + y);
+        y = -- x;
+        console.log('x = ' + x + ',y = ' + y);
+
+        var x = 10, y = 5;
+        var result = (x >= y) ? 'x >= y' : 'x < y';
+        console.log('result => ' + result);
+
+        var x = 10;
+        if(x < 100){
+            console.log('x값은 '+x+'입니다.');
+            console.log('x값은 100보다 작습니다.');
+        }
+
+        var y = 100;
+        if(y<50){
+            console.log('y값은 50보다 작습니다.');
+        }
+        else{
+            console.log('y값은 50보다 큽니다.');
+        }
+
+        var z = 25;
+        if(z%2 == 0)
+            console.log('z는 짝수입니다.');
+        else
+            console.log('z는 홀수입니다.');
+
+        var runningTime = 11;
+
+        if(runningTime <= 10)
+            console.log('매우 빠릅니다.');
+        else if(runningTime <= 12)
+            console.log('빠릅니다.');
+        else if(runningTime <= 15)
+            console.log('잘했어요.');
+        else
+            console.log('연습이 필요해요.');       
+    </script>
+</body>
+</html>

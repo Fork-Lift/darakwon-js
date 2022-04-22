@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-06.layout-float1</title>
+    <style>
+        #container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #header {
+            height: 100px;
+            background-color: lightcoral;
+        }
+
+        #nav, #main {
+            height: 200px;
+            float: left;
+        }
+
+        #nav {
+            width: 30%;
+            background-color: lightblue;
+        }
+
+        #main {
+            width: 70%;
+            background-color: lightgreen;
+        }
+
+        #footer {
+            clear: left;
+            height: 80px;
+            background-color: lightgray;
+        }
+
+        #flex-container {
+            display: flex;
+            justify-content: center;
+            background-color: lightgreen;
+        }
+
+        #flex-container > div {
+            background-color: lightcoral;
+            margin: 20px 10px;
+            height: 50px;
+            line-height: 50px;
+            width: 20%;
+            text-align: center;
+            color: white;
+        }
+        
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            cursor: pointer;
+        }
+
+        #book {
+            cursor: pointer;
+            box-shadow: 5px 5px 2px #888;
+        }
+    </style>
+    <script>
+        function changeColor(obj) {
+            obj.style.backgroundColor = 'lightgreen';
+
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">#header</div>
+        <div id="nav">#nav</div>
+        <div id="main">#main</div>
+        <div id="footer">#footer</div>
+    </div>
+
+    <div id="flex-container">
+        <div>flexbox#1</div>
+        <div>flexbox#2</div>
+        <div>flexbox#3</div>
+    </div>
+
+    <div id="box" onclick="changeColor(this)"></div>
+
+    <img src="./images/m3.jpg" alt="m3" id="book">
+    <script>
+        document.querySelector('#book').onclick = function(){
+        this.src = './images/my.jpg';
+        }
+    </script>
+</body>
+</html>

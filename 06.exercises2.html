@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06.exercises2</title>
+</head>
+<body>
+    <script>
+        var myBox = '';
+        var yourBox = '    ';
+
+        console.log(myBox == yourBox);
+        console.log(typeof myBox, typeof yourBox);
+
+        var base = 5;
+        var height = 10;
+        var area;
+
+        area = base * height / 2;
+        console.log('삼각형의 면적: ' + area);
+
+        var x = 10, y = 4, z;
+        
+        z = x + y;
+        console.log('x + y = ' + z);
+        z = x * y;
+        console.log('x * y = ' + z);
+        z = x % y;
+        console.log('x % y = ' + z);
+        x = '홍';
+        y = '길동';
+        console.log(x + y);
+
+        var x = 20;
+        console.log('x = ' + x);
+        x += 5;
+        console.log('x += 5 -> x = ' + x);
+        x *= 5;
+        console.log('x *= 5 -> x = ' + x);
+        x %= 5;
+        console.log('x %= 5 --> x = ' + x);
+
+        var x = 5, y = 8;
+        console.log('x == y ->' + (x == y));
+        console.log('x == y ->' + (x == y));
+        console.log('x > y ->' + (x > y));
+        console.log('x < y ->' + (x < y));
+
+        x = 5;
+        console.log('x == \'5\' ->' + (x == '5'));
+        console.log('x === \'5\' ->' + (x === '5'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06.dataType2</title>
+</head>
+<body>
+    <script>
+        console.log('edward', typeof 'edward');
+        console.log('10', typeof 10);
+        console.log('3.14', typeof 3.14);
+        console.log('true', typeof true);
+        console.log('false', typeof false);
+        console.log('myBox', typeof myBox);
+        console.log('null', typeof null);
+        console.log('undefined', typeof undefined);
+        console.log('[1,2,3]', typeof [1,2,3]);
+
+        console.log(1/0);
+        console.log(3*'홍길동');
+
+        console.log(isNaN(3));
+        console.log(isNaN('3'));
+        console.log(isNaN('홍길동'));
+
+        var myBox;
+        var yourBox = null;
+
+        console.log(myBox, typeof myBox);
+        console.log(yourBox, typeof yourBox);
+
+        console.log('==', null==undefined);
+        console.log('===', null==undefined);
+    </script>
+</body>
+</html>

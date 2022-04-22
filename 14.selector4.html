@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.selector4</title>
+    <script>
+        function search(){
+            var items = document.querySelectorAll('[title]');
+            
+            for(var i=0; i < items.length; i++){
+                items[i].style.backgroundColor = 'lightgreen';
+            }
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="search()">선택자로 찾기1</button>
+    <ul>
+        <li>첫 번째 리스트입니다.</li>
+        <li title="2번째 툴팁">두 번째 리스트입니다.</li>
+        <li>세 번째 리스트입니다.</li>
+        <li title="4번째 툴팁">네 번째 리스트입니다.</li>
+        <li>다섯 번째 리스트입니다.</li>
+    </ul>
+</body>
+</html>

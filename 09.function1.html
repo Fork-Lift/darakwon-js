@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09.function1</title>
+    <script>
+        function multiplier(x, y){
+            var result;
+            result = x * y;
+
+            return result;
+        }
+
+        var result = multiplier(5,11);
+        console.log('5*11='+result);
+
+        console.log('x와 y의 변수 이용');
+        var x = 5;
+        var y = 10;
+        result = multiplier(x, y);
+        console.log('x*y='+result);
+        console.log('x*y='+multiplier(x,y));
+
+        function myIntro(name, age){
+            console.log('내 이름은 '+name+'입니다.');
+            console.log('나이는 '+age+'입니다.');
+        }
+
+        myIntro('홍길동','12세');
+        myIntro('김보리','2세');
+
+        function BigNumber(num1, num2){
+            var num3;
+            if(num1 > num2)
+                num3 = num1;
+            else
+                num3 = num2;
+
+            return num3;
+        }
+
+        var big;
+        big = BigNumber(125,236);
+        console.log('큰 수: '+big);
+        var a,b;
+        a = 200;
+        b = 100;
+        big = BigNumber(a, b);
+        console.log('큰 수 : '+big);
+
+        function printStar(number){
+            if(number < 1){
+                console.log('잘못 입력하셨습니다.');
+                return;
+            }
+
+            var i;
+            for(i = 0; i < number; i++)
+                console.log('-*-');
+        }
+
+        printStar(-3);
+        printStar(4);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

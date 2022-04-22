@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-05.position2</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        .relative {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+
+        .absolute {
+            width: 50px;
+            height: 50px;
+            background-color: royalblue;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="relative">
+            <div class="absolute"></div>
+        </div>
+        <div class="absolute"></div>
+    </div>
+</body>
+</html>

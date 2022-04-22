@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06.variable</title>
+</head>
+<body>
+    <script>
+        console.log(container);
+        var container = 'javascript';
+        console.log(container);
+
+        var myMoney = 10;
+
+        var myContainer = 10;
+
+        function myFunction(){
+            var myContainer = '안녕';
+            console.log('지역 변수', myContainer);
+        }
+
+        myFunction();
+        console.log('전역 변수', myContainer);
+
+        var w = 5 + 10;
+        console.log(w);
+
+        var x = 5 + '10';
+        console.log(x);
+
+        var x2 = 5 + '명';
+        console.log(x2);
+
+        var y = true + 1;
+        console.log(y);
+
+        var z = '자바스크립트는 ' + '재밌다!';
+        console.log(z);
+
+        var initial;
+        console.log(initial);
+
+        var nothing = null;
+        console.log(nothing);
+
+        console.log(nothing2);
+    </script>
+</body>
+</html>

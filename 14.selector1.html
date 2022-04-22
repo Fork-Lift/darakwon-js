@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.selector1</title>
+    <script>
+        function search(){
+            var target = document.getElementById('third')
+            target.style.backgroundColor = 'orange';
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="search()">아이디로 찾기</button>
+    <ul>
+        <li>첫 번째 리스트입니다.</li>
+        <li>두 번째 리스트입니다.</li>
+        <li id="third">세 번째 리스트입니다.</li>
+        <li>네 번째 리스트입니다.</li>
+        <li>다섯 번째 리스트입니다.</li>
+    </ul>
+</body>
+</html>

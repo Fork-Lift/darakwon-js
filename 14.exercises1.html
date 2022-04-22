@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.exercises1</title>
+    <style>
+        .coral {
+            background-color: lightcoral;
+        }
+
+        .green {
+            background-color: lightgreen;
+        }
+
+        .blue {
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+        function change(){
+            var class1 = document.getElementsByClassName('coral');
+            var query1 = document.querySelectorAll('.coral');
+            
+            console.log('byClassName 전',class1.length);
+            console.log('selectorAll 전',query1.length);
+
+            document.getElementById('third').className = 'coral';
+
+            console.log('byClassName 후',class1.length);
+            console.log('selectorAll 후',query1.length);
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="change()">변경</button>
+    <ul>
+        <li class="coral">첫 번째 리스트입니다.</li>
+        <li>두 번째 리스트입니다.</li>
+        <li class="green">세 번째 리스트입니다.</li>
+        <li>네 번째 리스트입니다.</li>
+        <li id="third" class="blue">다섯 번째 리스트입니다.</li>
+    </ul>
+</body>
+</html>

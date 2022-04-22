@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16.dom2</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        figure {
+            margin: 10px;
+        }
+
+        img {
+            border: 1px solid #ddd;
+            padding: 5px 5px 30px 5px;
+            box-shadow: -2px -2px 2px #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <figure>
+            <img src="https://dummyimage.com/150x100/333/ddd">
+            <figcaption>그림 1. 이미지 설명</figcaption>
+        </figure>
+        <figure>
+            <img src="https://dummyimage.com/150x100/369/aaa">
+            <figcaption>그림 2. 이미지 설명</figcaption>
+        </figure>
+    </div>
+
+    <script>
+        var img1 = document.querySelector('figure > img');
+
+        img1.onclick = function(){
+            this.src = "https://dummyimage.com/150x100/ddd/333";
+        }
+
+        var img2 = document.querySelector('figure:nth-of-type(2) > img');
+
+        img2.onclick = function(){
+            this.setAttribute('src', 'https://dummyimage.com/150x100/aaa/369');
+        }
+    </script>
+</body>
+</html>

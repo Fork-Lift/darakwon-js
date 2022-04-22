@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.object3</title>
+    <script>
+        function Car(company, model){
+            this.company = company;
+            this.model = model;
+            this.myCarInfo = function(){
+                console.log('내 차는 '+
+                            this.company+'의 '+
+                            this.model+'입니다.');
+            }
+        }
+        var car1 = new Car('A회사', '중형차');
+        var car2 = new Car('B회사', '소형차');
+        console.log('car1의 정보');
+        console.log('회사 이름:',car1.company);
+        console.log('차의 모델',car1.model);
+        car1.myCarInfo();
+        console.log('car2의 정보');
+        console.log('회사 이름:',car2.company);
+        console.log('차의 모델',car2.model);
+        car2.myCarInfo();
+
+        function Book(publisher, name, price){
+            this.publisher = publisher;
+            this.name = name;
+            this.price = price;
+            this.showPrice = function(num){
+                var totalPrice = this.price * num;
+                return totalPrice;
+            };
+        }
+        var book1 = new Book('다락원', '오늘부터 자바스크립트', 23000);
+        var book2 = new Book('다락원', '스크래치야 반가워', 13800);
+        console.log('book1 객체 정보');
+        console.log('도서명', book1.name);
+        console.log('출판사', book1.publisher);
+        console.log('3권의 가격', book1.showPrice(3)+'원');
+        console.log('book2 객체 정보');
+        console.log('도서명', book2.name);
+        console.log('출판사', book2.publisher);
+        console.log('3권의 가격', book2.showPrice(3)+'원');
+        
+        var car = ['소형차', '중형차', '대형차'];
+        console.log('인덱스 0의 원소:',car[0]);
+        console.log('인덱스 2의 원소:',car[2]);
+        car[3] = '스포츠카';
+        console.log('car 배열의 원소:',car.toString());
+        car[1] = '버스';
+        console.log('car 배열의 원소:',car.toString());
+
+        console.log('1. fruit.length');
+        var fruit = ['오렌지', '딸기', '사과'];
+        console.log('fruit:', fruit);
+        console.log('fruit.length:', fruit.length);
+        console.log('2. fruit.sort()');
+        console.log('fruit (before):', fruit);
+        console.log('fruit sort():', fruit.sort());
+        console.log('fruit (after):', fruit);
+        console.log('3. fruit.join()');
+        console.log('fruit (before):', fruit);
+        console.log('fruit join():', fruit.join('-'));
+        console.log('fruit (after):', fruit);
+        console.log('4. fruit.pop()');
+        console.log('fruit (before):', fruit);
+        console.log('fruit pop():', fruit.pop());
+        console.log('fruit (after):', fruit);
+        console.log('5. fruit.push()');
+        console.log('fruit (before):', fruit);
+        console.log('fruit join():', fruit.push('바나나'));
+        console.log('fruit (after):', fruit);
+        console.log('6. fruit.shift()');
+        console.log('fruit (before):', fruit);
+        console.log('fruit shift():', fruit.shift());
+        console.log('fruit (after):', fruit);
+        console.log('7. fruit.unshift()');
+        console.log('fruit (before):', fruit);
+        console.log('fruit unshift():', fruit.unshift('귤'));
+        console.log('fruit (after):', fruit);
+        console.log('8. fruit.splice()');
+        console.log('fruit (before):', fruit);
+        console.log('fruit splice():', fruit.splice(1, 1, '파인애플'));
+        console.log('fruit (after):', fruit);
+        console.log('9. fruit.slice()');
+        console.log('fruit (before):', fruit);
+        console.log('fruit slice():', fruit.slice(1, 2));
+        console.log('fruit (after):', fruit);
+        console.log('10. fruit.concat()');
+        var fruit = ['오렌지', '딸기', '사과'];
+        var fruit1 = ['귤', '망고'];
+        console.log('fruit (before):', fruit);
+        console.log('fruit concat():', fruit.concat(fruit1));
+        console.log('fruit (after):', fruit);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

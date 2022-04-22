@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.array3</title>
+    <script>
+        var score = new Array(80, 75, 90, 85);
+
+        console.log('점수의 총 개수:', score.length);
+
+        var sum = 0, average;
+        for(var i = 0; i < score.length; i++)
+            sum += score[i];
+
+        average = sum / score.length;
+        console.log('점수의 평균: ', average);
+
+        var colors = ['red', 'yellow', 'gray', 'aqua'];
+        for(var i=0; i < colors.length;i++){
+            var str = '<div style="background-color:'+colors[i]+'">'+colors[i]+'</div>';
+            document.write(str);
+        }
+
+        var animalLike1 = "나는 말을 좋아합니다. ";
+        var animalLike2 = '나는 \'고양이\'를 좋아합니다.';
+        console.log(animalLike1);
+        console.log(animalLike2);
+        console.log(animalLike1+animalLike2);
+
+        var foodLike1 = new String('짜장면');
+        var foodLike2 = '짜장면';
+        console.log(foodLike1);
+        console.log(foodLike2);
+
+        console.log("두 개의 문자열 비교: ");
+        if(foodLike1 == foodLike2)
+            console.log("(==) 비교 결과는 같습니다.");
+        else
+            console.log("(==) 비교 결과는 다릅니다.");
+        if(foodLike1 === foodLike2)
+            console.log("(===) 비교 결과는 같습니다.");
+        else
+            console.log("(===) 비교 결과는 다릅니다.");
+
+        var str = 'abcde';
+        console.log(str.length);
+        str = '수수보리';
+        console.log(str.length);
+
+        str='abcde';
+        console.log(str.indexOf('d'));
+        console.log(str.indexOf('f'));
+
+        str='나는 사과를 좋아합니다.';
+        console.log(str.slice(3,5));
+
+        str='나는 비행기를 좋아합니다.';
+        console.log(str.substring(3,6));
+
+        str='나는 바다에서 고래를 봤습니다.';
+        console.log(str.substr(8,2));
+        console.log(str.substr(8));
+
+        str='나는 역사 박물관을 방문했습니다.';
+        console.log(str.replace('역사', '과학'));
+        console.log(str.replace('한국', '과학'));
+
+        str='abcDEFghijk';
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        var str1 = '나의 이름은 ';
+        var str2 = '홍길동';
+        var str3 = '입니다.';
+        console.log(str1.concat(str2));
+        console.log(str1.concat(str2, str3));
+
+        var str1 = '세종 ';
+        var str2 = '대왕';
+        console.log(str1.concat(str2));
+        console.log(str1.trim().concat(str2));
+
+        str = '대한 민국 만세';
+        var part = str.split(' ');
+        for(var i = 0; i < part.length; i++)
+            console.log(part[i]);
+    </script>
+    <style>
+        div {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 페이지의 제목</title>
+    <style>
+        #w3c {
+            box-sizing: content-box;
+            width: 400px;
+            margin: 50px;
+            border: 10px solid red;
+            padding: 20px;    
+        }
+
+        #ie {
+            box-sizing: border-box;
+            width: 400px;
+            margin: 50px;
+            border: 10px solid blue;
+            padding: 20px;    
+        }
+
+        .box {
+            padding: 10px;
+            margin: 10px;
+            background-color: lightgrey;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>나의 첫 번째 웹 페이지</h1>
+
+    <h2 class="title">
+        <a href="http://www.darakwon.co.kr">다락원</a>
+    </h2>
+
+    <div>div 태그 - 블록 요소</div>
+    <p>p 태그 - 블록 요소</p>
+    <span>span 태그 - 인라인 요소</span>
+    <img src="./images/logo.jpg" alt="">
+
+    <div id="w3c">W3C의 박스 모델</div>
+    <div id="ie">인터넷 익스플로러의 박스 모델</div>
+
+    <h1>선택자</h1>
+    <div>
+        <ul>
+            <li>첫째</li>
+            <li>둘째(나)</li>
+            <li>셋째</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <img src="./images/logo.jpg" class="left" alt="다락원 로고">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt odit dicta ratione vel, molestias obcaecati accusantium ex maxime, amet repellat iusto nemo ea ad quos eos doloribus aperiam vero suscipit!
+        <img src="./images/logo.jpg" class="right" alt="다락원 로고">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt odit dicta ratione vel, molestias obcaecati accusantium ex maxime, amet repellat iusto nemo ea ad quos eos doloribus aperiam vero suscipit!
+    </div>
+</body>
+</html>

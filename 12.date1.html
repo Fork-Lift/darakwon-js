@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.date1</title>
+    <script>
+        var today = new Date();
+        console.log('오늘 날짜 정보는:',today);
+
+        var weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday','Thursday','Friday','Saturday'];
+        console.log('연도:',today.getFullYear());
+        console.log('월:',today.getMonth()+1);
+        console.log('일:',today.getDate());
+        console.log('요일:',weekday[today.getDay()]);
+        console.log('시:',today.getHours());
+        console.log('분:',today.getMinutes());
+        console.log('초:',today.getSeconds());
+
+        var birthDay = new Date(2005,4,5,10,10,10);
+        console.log('birthDay:',birthDay);
+
+        var birthDay = new Date();
+        birthDay.setFullYear(2030);
+        birthDay.setMonth(10);
+        birthDay.setDate(11);
+        birthDay.setHours(11);
+        birthDay.setMinutes(11);
+        birthDay.setSeconds(11);
+        console.log('특정 날짜로 저장:',birthDay);
+
+        var date = new Date(2021,10,10);
+        console.log('날짜 정보는:',date);
+        date.setDate(date.getDay()+50);
+        console.log('현째 날짜 +50일 이후의 날짜는:',date);
+
+        date = new Date(2021,10,10,10,10,10);
+        console.log('날짜 정보는:',date);
+        date.setHours(date.getHours()+35);
+        console.log('현재 날짜 +35시간 이후의 날짜는:',date);
+
+        console.log('Math.PI',Math.PI);
+        console.log('Math.round(4.7)',Math.round(4.7));
+        console.log('Math.round(4.2)',Math.round(4.2));
+        console.log('Math.pow(4.3)',Math.pow(4,3));
+        console.log('Math.pow(4.2)',Math.pow(4,2));
+        console.log('Math.sqrt(9)',Math.sqrt(9));
+        console.log('Math.sqrt(81)',Math.sqrt(81));
+        console.log('Math.abs(-4)',Math.abs(-4));
+        console.log('Math.abs(-5.2)',Math.abs(-5.2));
+        console.log('Math.ceil(4.1)',Math.ceil(4.1));
+        console.log('Math.ceil(3.8)',Math.ceil(3.8));
+
+        console.log('Math.floor(4.1):',Math.floor(4.1));
+        console.log('Math.floor(3.8):',Math.floor(3.8));
+        console.log('Math.sin(90*Math.PI/180):',Math.sin(90*Math.PI/180));
+        console.log('Math.cos(180*Math.PI/180):',Math.cos(180*Math.PI/180));
+        console.log('Math.min(4,7,10,-3):',Math.min(4,7,10,-3));
+        console.log('Math.max(4,7,10,-3):',Math.max(4,7,10,-3));
+        console.log('Math.random():',Math.random());
+        
+        console.log('0-100 사이의 난수 5개를 만들어 보세요.');
+        var x, i;
+        var maxNum = 100;
+        for(i=1;i<=5;i++){
+            x = Math.floor(Math.random()*maxNum+1);
+            console.log(i+'번째 난수:',x)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
