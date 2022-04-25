@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>16.dom-remove</title>
+    <title>16.exercise</title>
     <style>
+        input[name="append"]{
+            padding: 5px;
+            width: 80%;
+        }
+
         #mylist {
             list-style-type: none;
             padding: 0;
@@ -23,9 +28,22 @@
     </style>
 </head>
 <body>
-    <input type="text" >
+    <input type="text" name="append" placeholder="내용 입력 후 엔터!">
     <ul id="mylist">
         <li>1번째 목록</li>
     </ul>
+    <script>
+        var newList = document.querySelector('input[name="append"]');
+
+        newList.onkeydown = function(event){
+            if(event.which == 13 && event.target.value.length > 2){
+                var elm = document.createElement('li');
+                var txt = document.createTextNode(this.value);
+
+                elm.appendChild(txt);
+                document.getElementById('mylist').appendChild(elm);
+            }
+        }
+    </script>
 </body>
 </html>
