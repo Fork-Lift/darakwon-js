@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>17.bom-window1</title>
+    <style>
+        #myList > li {
+            padding: 5px;
+        }
+
+        #myList > li:hover {
+            cursor: pointer;
+            color: #ddd;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <ol id="myList">
+        <li>window.open() 기본형</li>
+        <li>화면 이동</li>
+        <li>팝업창 열기</li>
+        <li>팝업창 제어</li>
+        <li>
+            <a href="http://www.darakwon.co.kr" target="_blank">다락원</a>
+        </li>
+    </ol>
+    <script>
+        var lists = document.querySelectorAll('#myList > li');
+        console.log(lists);
+        
+        lists[0].onclick = function(){
+            window.open();
+        }
+
+        lists[1].onclick = function(){
+            window.open('http://www.darakwon.co.kr','_itself');
+        }
+        
+        lists[2].onclick = function(){
+            window.open('http://m.daum.net','','width=400,height=400');
+        }
+
+        lists[3].onclick = function(){
+            var win = window.open('','','width=200,height=200');
+            win.document.write('<h1>새창입니다.</h1>')
+            win.opener.document.write('<h1>부모창입니다.</h1>')
+        }
+    </script>
+</body>
+</html>
