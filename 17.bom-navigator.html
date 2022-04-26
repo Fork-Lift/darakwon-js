@@ -11,7 +11,9 @@
         }
 
         legend {
-            
+            padding: 5px;
+            color: #fff;
+            background-color: lightcoral;
         }
     </style>
 </head>
@@ -32,5 +34,18 @@
         <legend>브라우저 온라인(online)</legend>
         <div id="online"></div>
     </fieldset>
+    <script>
+        var browserName = document.getElementById('name');
+        browserName.innerText = navigator.appName;
+
+        var codeName = document.getElementById('codeName');
+        codeName.innerText = navigator.appCodeName;
+
+        var language = document.getElementById('language');
+        language.innerText = navigator.language;
+
+        var online = document.getElementById('online');
+        online.innerText = navigator.onLine;
+    </script>
 </body>
 </html>
