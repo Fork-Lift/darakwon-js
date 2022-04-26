@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.exercise</title>
+    <style>
+        fieldset {
+            margin: 10px;
+        }
+
+        legend {
+            padding: 5px;
+            background-color: lightblue;
+        }
+
+        input[type="text"] {
+            box-sizing: border-box;
+            padding: 5px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>alert()</legend>
+        <input type="text" name="alert" value="클릭하세요">
+    </fieldset>
+    <fieldset>
+        <legend>confirm()</legend>
+        <button type="button">confirm()</button>
+        <hr>
+        <input type="text" name="confirm" readonly="readonly">
+    </fieldset>
+    <fieldset>
+        <legend>prompt()</legend>
+        <input type="button" value="prompt">
+        <hr>
+        <input type="text" name="prompt" disabled="disable">
+    </fieldset>
+    <script>
+        var myAlert = document.querySelector('input');
+        myAlert.onclick = function(){
+            alert(this.value);
+        }
+
+        var myConfirm = document.querySelector('button');
+        myConfirm.onclick = function(){
+            var ans = document.querySelector('input[name="confirm"]');
+            if(confirm('자바스크립트 재밌고 쉽죠?')){
+                ans.value = '멋져요!';
+            } else {
+                ans.value = '조금만 더 힘을 내요!';
+            }
+        }
+
+        var myPrompt = document.querySelector('input[type="button"]');
+        myPrompt.onclick = function(){
+            
+        }
+    </script>
+</body>
+</html>
