@@ -57,7 +57,13 @@
 
         var myPrompt = document.querySelector('input[type="button"]');
         myPrompt.onclick = function(){
-            
+            var yourname = prompt('이름을 입력하세요','홍길동');
+            var ans = document.querySelector('input[name="prompt"]');
+            if(yourname == null || yourname == ''){
+                ans.value = '이름을 입력하지 않았어요';
+            } else {
+                ans.value = yourname +'님 안녕하세요!';
+            }
         }
     </script>
 </body>
