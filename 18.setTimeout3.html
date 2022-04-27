@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18.setTimeout3</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: navy;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <!-- <script>
+        document.getElementById('box').onclick = function(){
+            var that = this;
+            setTimeout(function(){
+                console.log(that);
+                that.style.width = '200px';
+                that.style.height = '200px';
+                that.style.backgroundColor = 'orange';
+                that.style.borderRadius = '50%';
+            }, 1000);
+        }
+    </script> -->
+    <!-- getElementById는 파라미터를 문자열로 표현, querySelector는 파라미터를 선택자로 표현  -->
+    <script>
+        document.querySelector('#box').onclick = function(){
+            var that = this;
+            setTimeout(function(){
+                console.log(that);
+                that.style.width = '200px';
+                that.style.height = '200px';
+                that.style.backgroundColor = 'orange';
+                that.style.borderRadius = '50%';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
