@@ -14,6 +14,23 @@
             cursor: pointer;
         }
     </style>
+    <script>
+        var myInterval;
+        var span = 0;
+
+        function doMove(){
+            myInterval = setInterval(function(){
+                var circle = document.querySelector('#circle');
+                span += 10;
+                console.log(span);
+                circle.style.marginLeft = span +'px';
+            }, 250);
+        }
+
+        function doStop(){
+            clearInterval(myInterval);
+        }
+    </script>
 </head>
 <body>
     <button type="button" onclick="doMove();">출발</button>
