@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18.exercise</title>
+    <style>
+        #box {
+            position: relative;
+            height: 200px;
+            background-color: orange;
+        }
+
+        #box div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: blueviolet;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div></div>
+    </div>
+    <script>
+        var myTimeout;
+        var flag = false;
+
+        document.querySelector('#box > div').onclick = function(){
+            this.style.left = 0;
+            flag = !flag;
+            doMove(this);
+        }
+
+        function doMove(obj){
+            if(flag){
+                console.log(obj.style.left);
+                obj.style.left = parseInt(obj.style.left) + 10 + 'px';
+                myTimeout = setTimeout(doMove, 250, obj);
+            } else {
+                clearTimeout(myTimeout);
+            }
+        }
+    </script>
+</body>
+</html>

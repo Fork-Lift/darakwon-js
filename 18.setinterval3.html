@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18.setinterval3</title>
+    <style>
+        #circle {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: navy;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <script>
+        var myInterval;
+        var flag = false;
+
+        document.querySelector('#circle').onclick = function(){
+            var that = this;
+            that.style.left = 0;
+            if(flag = !flag){
+                myInterval = setInterval(function(){
+                    console.log(that.style.left);
+                    that.style.backgroundColor = 'orange';
+                    that.style.left = parseInt(that.style.left) + 10 + 'px';
+                }, 250);
+            } else {
+                clearInterval(myInterval);
+                that.style.backgroundColor = 'navy';
+            }
+        }
+    </script>
+</body>
+</html>
