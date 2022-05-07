@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.form-event3</title>
+    <style>
+        input[type="radio"]:checked + label {
+            color: red;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+            font-size: larger;
+        }
+
+        select {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>onchange</legend>
+        <input type="radio" name="book" id="js" value="js">
+        <label for="js">자바스크립트</label>
+
+        <input type="radio" name="book" id="python" value="py">
+        <label for="python">파이썬</label>
+
+        <input type="radio" name="book" id="scratch" value="sc">
+        <label for="scratch">스크래치</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>onselect</legend>
+        <select>
+            <option value="0">::선택하세요::</option>
+            <option value="js">자바스크립트</option>
+            <option value="py">파이썬</option>
+            <option value="sc">스크래치</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>선택 결과</legend>
+        <textarea id="content"></textarea>
+    </fieldset>
+
+    <script>
+        var books = document.querySelectorAll('input[name="book"]');
+        var select = document.querySelector('select');
+        var content = document.getElementById('content');
+
+        for(var i=0; i<books.length; i++){
+            books[i].onchange = function(){
+                content.value = this.value;
+            }
+        }
+
+        select.onchange = function(){
+            console.log(this.selectedIndex + '번째');
+            content.value = this.value;
+        }
+
+        content.onselect = function(){
+            if(confirm('선택한 문자열을 복사할까요?')){
+                document.execCommand('copy');
+                alert(this.value + '이 복사되었습니다.');
+            }
+        }
+    </script>
+</body>
+</html>

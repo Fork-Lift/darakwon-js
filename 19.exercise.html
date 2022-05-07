@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.exercise</title>
+    <style>
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>라디오 박스</legend>
+        <input type="radio" name="book" id="js" value="js">
+        <label for="js">자바스크립트</label>
+
+        <input type="radio" name="book" id="python" value="py">
+        <label for="python">파이썬</label>
+
+        <input type="radio" name="book" id="scratch" value="sc">
+        <label for="scratch">스크래치</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>선택 박스</legend>
+        <select>
+            <option value="0">::선택하세요::</option>
+            <option value="js">자바스크립트</option>
+            <option value="py">파이썬</option>
+            <option value="sc">스크래치</option>
+        </select>
+    </fieldset>
+
+    <script>
+        var books = document.querySelectorAll('input[name="book"]');
+        var select = document.querySelector('select');
+
+        for(var i=0; i<books.length; i++){
+            books[i].onchange = function(){
+                select.value = this.value;
+            }
+        }
+
+        select.onchange = function(){
+            for(var k=0; k<books.length; k++){
+                books.checked = false;
+                if(books[k].value == this.value){
+                    books[k].checked = true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
